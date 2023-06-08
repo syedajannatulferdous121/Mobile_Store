@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <style>
+    /* Add your custom styles here */
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .cart-icon {
+      display: flex;
+      align-items: center;
+    }
+
+    .cart-icon a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    .hero {
+      background-color: #f0f0f0;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .product-details {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 20px;
+    }
+
+    .product-image img {
+      width: 300px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .product-info {
+      flex: 1;
+    }
+
+    .product-info h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .product-info p {
+      margin-bottom: 20px;
+    }
+
+    .product-price {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .product-availability {
+      margin-bottom: 10px;
+    }
+
+    .product-variants label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .product-variants select {
+      margin-bottom: 10px;
+    }
+
+    .product-quantity label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .product-quantity input {
+      margin-bottom: 10px;
+    }
+
+    .add-to-cart {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .add-to-cart:hover {
+      background-color: #555;
+    }
+
+    .product-social {
+      margin-top: 20px;
+    }
+
+    .product-social span {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .product-social a {
+      margin-right: 10px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .product-reviews {
+      margin: 20px;
+    }
+
+    .product-reviews h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .reviews-list {
+      margin-bottom: 20px;
+    }
+
+    .review {
+      margin-bottom: 10px;
+    }
+
+    .review .rating {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .add-review {
+      margin-bottom: 20px;
+    }
+
+    .add-review h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .add-review form {
+      margin-bottom: 10px;
+    }
+
+    .rating label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .rating select {
+      margin-bottom: 10px;
+    }
+
+    .review-text label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .review-text textarea {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    .submit-review {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .submit-review:hover {
+      background-color: #555;
+    }
+
+    .related-products {
+      margin: 20px;
+    }
+
+    .related-products h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .product-list {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .product-card {
+      width: 250px;
+      background-color: #f0f0f0;
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Mobile Store</div>
+    <div class="cart-icon">
+      <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+      <span class="cart-count">0</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="product-details">
+      <div class="product-image">
+        <img src="product-image.jpg" alt="Product Image">
+      </div>
+      <div class="product-info">
+        <h1>Product Name</h1>
+        <p>Product description goes here</p>
+        <div class="product-price">Price: $99.99</div>
+        <div class="product-availability">In Stock</div>
+        <div class="product-variants">
+          <label for="size">Size:</label>
+          <select id="size" name="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <label for="color">Color:</label>
+          <select id="color" name="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+        </div>
+        <div class="product-quantity">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" value="1">
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+        <div class="product-social">
+          <span>Share:</span>
+          <a href="#" class="social-icon facebook">Facebook</a>
+          <a href="#" class="social-icon twitter">Twitter</a>
+          <a href="#" class="social-icon instagram">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-reviews">
+      <h2>Customer Reviews</h2>
+      <div class="reviews-list">
+        <div class="review">
+          <div class="rating">4.5 stars</div>
+          <p>Great product! Highly recommended.</p>
+        </div>
+        <div class="review">
+          <div class="rating">3.8 stars</div>
+          <p>Not bad, but could be better.</p>
+        </div>
+      </div>
+      <div class="add-review">
+        <h3>Add Your Review</h3>
+        <form>
+          <div class="rating">
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+              <option value="5">5 stars</option>
+              <option value="4">4 stars</option>
+              <option value="3">3 stars</option>
+              <option value="2">2 stars</option>
+              <option value="1">1 star</option>
+            </select>
+          </div>
+          <div class="review-text">
+            <label for="review">Review:</label>
+            <textarea id="review" name="review" rows="4" cols="50"></textarea>
+          </div>
+          <button class="submit-review">Submit Review</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="related-products">
+      <h2>Related Products</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="product1.jpg" alt="Product 1">
+          <h3>Product 1</h3>
+          <p>Price: $49.99</p>
+        </div>
+        <div class="product-card">
+          <img src="product2.jpg" alt="Product 2">
+          <h3>Product 2</h3>
+          <p>Price: $79.99</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Footer content goes here -->
+  </footer>
+</body>
+
+</html>
